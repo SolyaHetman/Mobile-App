@@ -1,15 +1,15 @@
 import React from 'react';
 import { IonContent, IonPage } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 import Header from '../components/shared/header/Header';
+import MainMenu  from '../components/MainMenu';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <Header title="Test title"/>
-        <ExploreContainer />
+        <Header title="My title"/>
+        <MainMenu />
       </IonContent>
     </IonPage>
   );
