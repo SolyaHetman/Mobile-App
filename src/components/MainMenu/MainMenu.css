@@ -1,0 +1,5 @@
+.mainMenu {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
