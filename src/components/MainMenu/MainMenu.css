@@ -1,5 +1,19 @@
+.card {
+    background: white;
+}
+
 .mainMenu {
     position: relative;
     top: 45%;
     transform: translateY(-50%);
+}
+
+.mainTitleMenu {
+    text-align: center;
+    color: grey;
+    font-size: 17px;
+}
+
+.card :hover {
+    background: orange;
 }

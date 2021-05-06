@@ -1,17 +1,21 @@
 import React from 'react';
-import { IonContent, IonPage, IonHeader } from '@ionic/react';
+import { IonContent, IonPage, IonHeader, IonFooter } from '@ionic/react';
 import Header from '../../components/shared/header/Header';
-import StartTrainingMenu  from '../../components/StartTraingMenu';
+import StartTrainingMenu  from '../../components/StartTraningMenu/StartTraningMenu';
+import Footer from '../../components/shared/header/footer/Footer'
 
 const StartTrainingPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-          <Header title="My title"/>
+          <Header title="Твій помічник" page="StartTrainingPage"/>
       </IonHeader>
       <IonContent fullscreen>
         <StartTrainingMenu />
       </IonContent>
+      <IonFooter>
+        <Footer />
+      </IonFooter>
     </IonPage>
   );
 };

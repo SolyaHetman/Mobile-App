@@ -7,7 +7,7 @@ const SettingTrainingPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-          <Header title="My title"/>
+          <Header title="My title" page="StettingTrainingPage"/>
       </IonHeader>
       <IonContent fullscreen>
         <SettingTraining />

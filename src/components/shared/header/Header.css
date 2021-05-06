@@ -1,5 +1,8 @@
 ion-toolbar {
     --color: white;
     --background: orange;
+}
+
+ion-title {
     text-align: center;
 }

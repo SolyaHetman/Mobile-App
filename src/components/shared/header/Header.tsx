@@ -1,27 +1,34 @@
 import React, { FC } from 'react'
 import { IonTitle, IonToolbar, IonButtons, IonBackButton, IonIcon, IonButton } from '@ionic/react';
-import { settingsOutline } from 'ionicons/icons';
+import { settingsOutline, informationCircleOutline } from 'ionicons/icons';
 import './Header.css';
 
 type Props = {
-    title: string
+    title: string,
+    page: string,
 }
 
-const Header: FC<Props> = ({ title }) => {
+const Header: FC<Props> = ({ title, page }) => {
     return (
         <>
             <IonToolbar>
-                {/* <IonButtons slot="start">
+                {(page === "StartTrainingPage" || page === "SettingTrainingPage") && 
+                <IonButtons slot="start">
                      <IonBackButton defaultHref="/"/>
-                </IonButtons> */}
-                <div text-center>
-                    <IonTitle text-center>{ title }</IonTitle>
-                </div>
-                {/* <IonButtons slot="end">
+                </IonButtons>  } 
+                <IonTitle>{ title }</IonTitle>
+                {page === "StartTrainingPage" && 
+                <IonButtons slot="end">
                     <IonButton routerLink="/home/startTraining/settings">
                         <IonIcon slot="icon-only" icon={settingsOutline}/>
                     </IonButton>
-                </IonButtons> */}
+                </IonButtons>}
+                {page === "MainPage" &&
+                <IonButtons slot="end">
+                    <IonButton>
+                        <IonIcon slot="icon-only" icon={informationCircleOutline}/>
+                    </IonButton>
+                </IonButtons>}
             </IonToolbar>
         </>
     )
