@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import { IonTitle, IonToolbar, IonButtons, IonBackButton, IonIcon, IonButton } from '@ionic/react';
 import { settingsOutline, informationCircleOutline } from 'ionicons/icons';
 import './Header.css';
