@@ -23,7 +23,7 @@ const Header: FC<Props> = ({ title, page }) => {
                         <IonIcon slot="icon-only" icon={settingsOutline}/>
                     </IonButton>
                 </IonButtons>}
-                {page === "MainPage" &&
+                {(page === "MainPage" || page === "SettingTrainingPage") &&
                 <IonButtons slot="end">
                     <IonButton>
                         <IonIcon slot="icon-only" icon={informationCircleOutline}/>

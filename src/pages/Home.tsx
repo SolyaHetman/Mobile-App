@@ -3,7 +3,7 @@ import { IonContent, IonPage, IonHeader, IonFooter } from '@ionic/react';
 import './Home.css';
 import Header from '../components/shared/header/Header';
 import MainMenu  from '../components/MainMenu/MainMenu';
-import Footer from '../components/shared/header/footer/Footer';
+import Footer from '../components/shared/footer/Footer';
 
 const Home: React.FC = () => {
   return (
