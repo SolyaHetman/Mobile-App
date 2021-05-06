@@ -1,3 +1,4 @@
 ion-content {
-    --ion-background-color: aliceblue;
+    /* --ion-background-color: rgb(255, 165, 0, 0.05); */
+    --ion-background-color: rgb(128, 128, 128, 0.04)
 }

@@ -1,3 +1,29 @@
+.trainingMenu {
+    position: relative;
+    top: 48%;
+    transform: translateY(-50%);
+}
+
 .cardExercise {
     background: white;
+}
+
+.cardExerciseContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardExerciseTitle {
+    text-align: center;
+    color: grey;
+    font-size: 17px;
+}
+
+ion-toggle {
+    --background: rgb(214, 209, 209);
+    --background-checked: rgb(255, 165, 0, 0.61);
+    --handle-background: orange;
+    --handle-background-checked: orange;
 }
