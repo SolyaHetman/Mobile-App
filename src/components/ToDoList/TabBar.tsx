@@ -18,7 +18,7 @@ const TabBar: FC = () => {
         <IonTabBar slot="bottom">
             <IonTabButton tab="toDoList" href="/home/schedule/toDoList">
                 <IonLabel>Список справ</IonLabel>
-                <IonBadge>6</IonBadge>
+                <IonBadge>5</IonBadge>
             </IonTabButton>
 
             <IonTabButton tab="reminder" href="/home/schedule/reminder">

@@ -20,6 +20,7 @@ import { trashOutline,pencilOutline } from 'ionicons/icons';
 const notes = [
     {
         id: 12,
+        repeatableNotes: false,
         title: 'Забрати документи',
         date: '14.05.2021',
         time:'12:00',
@@ -28,6 +29,7 @@ const notes = [
     },
     {
         id: 13,
+        repeatableNotes: false,
         title: 'Забрати паспрот',
         date: '16.05.2021',
         time:'12:15',
@@ -36,6 +38,7 @@ const notes = [
     },
     {
         id: 14,
+        repeatableNotes: false,
         title: 'Забрати паспрот',
         date: '23.05.2021',
         time:'12:15',
@@ -44,6 +47,7 @@ const notes = [
     },
     {
         id: 15,
+        repeatableNotes: false,
         title: 'Зустріч з дизайнером',
         date: '14.06.2021',
         time:'12:15',
@@ -52,6 +56,7 @@ const notes = [
     },
     {
         id: 17,
+        repeatableNotes: false,
         title: 'Забрати паспрот',
         date: '15.06.2021',
         time:'12:15',

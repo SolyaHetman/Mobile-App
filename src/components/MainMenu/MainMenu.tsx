@@ -7,19 +7,19 @@ const MainMenu: React.FC = () => {
     <>
     <div className="mainMenu">
       <div>
+      <IonCard className="card" routerLink='/home/startTraining'>
+          <IonCardHeader>
+            <IonCardTitle className="mainTitleMenu">Розпочати тренування</IonCardTitle>
+          </IonCardHeader>
+        </IonCard>
          <IonCard className="card" routerLink='/home/schedule'>
           <IonCardHeader>
-            <IonCardTitle className="mainTitleMenu">Список справ</IonCardTitle>
+            <IonCardTitle className="mainTitleMenu">Список нотаток</IonCardTitle>
           </IonCardHeader>
         </IonCard>
         <IonCard className="card">
           <IonCardHeader>
-            <IonCardTitle className="mainTitleMenu">Додати нагадування</IonCardTitle>
-          </IonCardHeader>
-        </IonCard>
-        <IonCard className="card" routerLink='/home/startTraining'>
-          <IonCardHeader>
-            <IonCardTitle className="mainTitleMenu">Розпочати тренування</IonCardTitle>
+            <IonCardTitle className="mainTitleMenu">Додати нотатку</IonCardTitle>
           </IonCardHeader>
         </IonCard>
       </div>  
