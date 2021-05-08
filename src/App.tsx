@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import StartTrainingPage from './pages/Training/StartTrainingPage';
 import SettingTrainingPage from './pages/Training/SettingTrainigPage';
 import TrainingsPage from './pages/Training/TrainingsPages';
+import ToDoListPage from './pages/ToDoList/ToDoListPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -44,6 +45,10 @@ const App: React.FC = () => (
         <Route exact path="/trainings">
           <TrainingsPage />
         </Route>
+        {/* <Route exact path="/home/schedule">
+          <ToDoListPage />
+        </Route> */}
+        <ToDoListPage />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

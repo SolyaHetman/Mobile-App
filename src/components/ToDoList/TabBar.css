@@ -1,0 +1,19 @@
+ion-tab-bar {
+    background: orange;
+}
+
+ion-tab-button {
+    --background: orange;
+    --color: white;
+    font-size: 16px;
+}
+
+ion-tab-button.tab-selected {
+    --color-selected: grey;
+}
+
+ion-badge {
+    margin-left: 25px;
+    background: grey;
+    color: white;
+}

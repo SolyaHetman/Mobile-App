@@ -7,7 +7,7 @@ const MainMenu: React.FC = () => {
     <>
     <div className="mainMenu">
       <div>
-         <IonCard className="card">
+         <IonCard className="card" routerLink='/home/schedule'>
           <IonCardHeader>
             <IonCardTitle className="mainTitleMenu">Список справ</IonCardTitle>
           </IonCardHeader>

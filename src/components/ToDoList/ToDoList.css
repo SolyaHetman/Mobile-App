@@ -1,0 +1,19 @@
+.cardNoteTitle {
+    font-size: 18px;
+    color: grey;
+}
+
+.cardNoteSubTitle {
+    color: orange;
+}
+
+.cardNoteHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ion-button.cardNoteIcon {
+    color: orange;
+    font-size: 11px;
+}
