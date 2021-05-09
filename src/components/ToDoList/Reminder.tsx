@@ -9,7 +9,8 @@ import {
     IonCardContent, 
     IonIcon,
     IonButtons,
-    IonButton
+    IonButton,
+    IonToggle
 } from '@ionic/react';
 import Header from '../shared/header/Header';
 import './ToDoList.css';
@@ -58,7 +59,10 @@ const Reminder: FC = () => {
                 <IonCard className="cardNotes" key={reminder.id}>
                     <IonCardHeader>
                         <div className="cardNoteHeader">
-                            <IonCardTitle className="cardNoteTitle">{reminder.title}</IonCardTitle>
+                            <div>
+                                <IonCardTitle className="cardNoteTitle">{reminder.title}</IonCardTitle>
+                                <IonToggle />
+                            </div>        
                             <IonButtons>
                                 <IonButton className="cardNoteIcon">
                                     <IonIcon slot="icon-only" icon={pencilOutline}/>
