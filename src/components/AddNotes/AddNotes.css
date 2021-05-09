@@ -1,0 +1,20 @@
+ion-radio {
+    --color-checked: orange;
+}
+
+ion-datetime {
+    color: orange;
+}
+
+ion-item {
+    font-size: 14px;
+    --highlight-background: orange;
+}
+
+.picker-button.sc-ion-picker-md {
+    color: orange;
+}
+
+.picker-opt.picker-opt-selected {
+    color: orange;
+}

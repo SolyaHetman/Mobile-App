@@ -17,7 +17,7 @@ const MainMenu: React.FC = () => {
             <IonCardTitle className="mainTitleMenu">Список нотаток</IonCardTitle>
           </IonCardHeader>
         </IonCard>
-        <IonCard className="card">
+        <IonCard className="card" routerLink='/home/addNotes'>
           <IonCardHeader>
             <IonCardTitle className="mainTitleMenu">Додати нотатку</IonCardTitle>
           </IonCardHeader>

@@ -12,7 +12,7 @@ const Header: FC<Props> = ({ title, page }) => {
     return (
         <>
             <IonToolbar>
-                {(page === "StartTrainingPage" || page === "SettingTrainingPage" || page === "ToDoListPage"|| page === "ReminderPage") && 
+                {(page === "StartTrainingPage" || page === "SettingTrainingPage" || page === "ToDoListPage"|| page === "ReminderPage" || page === "AddNotesPage") && 
                 <IonButtons slot="start">
                      <IonBackButton defaultHref="/"/>
                 </IonButtons>  } 
