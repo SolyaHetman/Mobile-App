@@ -72,7 +72,7 @@ const AddNotes : React.FC = () => {
             </IonItem>
   
             <IonItem>
-              <IonLabel>Подія буде відбуватись кожень день</IonLabel>
+              <IonLabel>Подія буде відбуватись кожен день</IonLabel>
               <IonRadio slot="start" value="true" />
             </IonItem>
           </IonRadioGroup>
@@ -125,7 +125,7 @@ const AddNotes : React.FC = () => {
                   <IonIcon slot="icon-only" icon={timeOutline}/>
                 </IonButton>
               </IonButtons>
-              <IonDatetime displayFormat="h:mm a" value={startDate} onIonChange={e => setStartDate(e.detail.value!)}></IonDatetime>
+              <IonDatetime displayFormat="H:mm" value={startDate} onIonChange={e => setStartDate(e.detail.value!)}></IonDatetime>
             </IonItem>
 
             <div className="timePickerTitle">
@@ -137,7 +137,7 @@ const AddNotes : React.FC = () => {
                     <IonIcon slot="icon-only" icon={timeOutline}/>
                   </IonButton>
                 </IonButtons>
-                <IonDatetime displayFormat="h:mm a" value={endDate} onIonChange={e => setEndDate(e.detail.value!)}></IonDatetime>
+                <IonDatetime displayFormat="H:mm" value={endDate} onIonChange={e => setEndDate(e.detail.value!)}></IonDatetime>
               </IonItem>
             <div className="timePickerTitle">
               <span>Інтервал</span>
