@@ -36,29 +36,22 @@ export const remindersMethods = {
         return []
       }
     },
-    // addItem: async (name: string, status: ItemStatus, handleAddItem: (name: string, id: string) => void): Promise<void> => {
-    //   const user = firebase.auth().currentUser
+
+    addReminder: async (data: any): Promise<void> => {
+      const collectionRef = db.collection("notes");
   
-    //   if (user) {
-    //     try {
-    //       let itemRef = db.collection(COLLECTIONS.USERS).doc(user.uid).collection(COLLECTIONS.ITEMS).doc()
-  
-    //       await itemRef.set({
-    //         name,
-    //         created: firebase.firestore.Timestamp.fromDate(new Date()),
-    //         status
-    //       });
-  
-    //       handleAddItem(name, itemRef.id)
-  
-    //       return
-    //     } catch (err) {
-    //       console.log('error saving Item');
-    //     }
-    //   } else {
-    //     return
-    //   }
-    // },
+      if (collectionRef) {
+        try {
+          let itemRef = collectionRef.doc();
+          await itemRef.set(data);
+          return 
+        } catch (err) {
+          console.log('error saving Item', err );
+        }
+      } else {
+        return 
+      }
+    },
     // editItem: async (newName: string, newStatus: ItemStatus, id: string): Promise<void> => {
     //   const user = firebase.auth().currentUser;
   

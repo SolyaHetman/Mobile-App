@@ -20,6 +20,7 @@ import { alertCircleOutline } from 'ionicons/icons';
 import './AddNotes.css';
 import { timeOutline, hourglassOutline } from 'ionicons/icons';
 import { toDolistMethods } from '../../shared/services/ToDoListMethods';
+import { remindersMethods } from '../../shared/services/RemindersMethods';
 
 const AddNotes : React.FC = () => {
   const [repeatableNotes, setSelected] = useState<string>();
@@ -28,11 +29,9 @@ const AddNotes : React.FC = () => {
   const [date, setSelectedDate] = useState<string>();
   const [importance, setImportance] = useState(0);
   const [color, onRangeChangeHandler] = useState<string>('dark');
-  const [startDate, setStartDate] = useState<string>('2012-12-15T13:47:20.789');
-  const [endDate, setEndDate] = useState<string>('2012-12-15T13:47:20.789');
+  const [startInterval, setStartInterval] = useState<string>();
+  const [endInterval, setEndInterval] = useState<string>();
   const [interval, setInterval] = useState<string>();
-
-  const [formData, setFormData] = useState<any[]>([]);
 
   const onIonRangeChange = (event: any) => {
     const importance = event.target.value;
@@ -57,6 +56,19 @@ const AddNotes : React.FC = () => {
       repeatableNotes
     };
     await toDolistMethods.addToDoList(data);
+  }
+
+  const saveReminder = async () => {
+    const data = {
+        title,
+        content,
+        startInterval,
+        endInterval,
+        interval,
+        repeatableNotes,
+        active: true
+    }
+    await remindersMethods.addReminder(data);
   }
 
   return (
@@ -127,7 +139,7 @@ const AddNotes : React.FC = () => {
                   <IonIcon slot="icon-only" icon={timeOutline}/>
                 </IonButton>
               </IonButtons>
-              <IonDatetime displayFormat="H:mm" value={startDate} onIonChange={e => setStartDate(e.detail.value!)}></IonDatetime>
+              <IonDatetime displayFormat="H:mm" value={startInterval} onIonChange={e => setStartInterval(e.detail.value!)}></IonDatetime>
             </IonItem>
 
             <div className="timePickerTitle">
@@ -139,7 +151,7 @@ const AddNotes : React.FC = () => {
                     <IonIcon slot="icon-only" icon={timeOutline}/>
                   </IonButton>
                 </IonButtons>
-                <IonDatetime displayFormat="H:mm" value={endDate} onIonChange={e => setEndDate(e.detail.value!)}></IonDatetime>
+                <IonDatetime displayFormat="H:mm" value={endInterval} onIonChange={e => setEndInterval(e.detail.value!)}></IonDatetime>
               </IonItem>
             <div className="timePickerTitle">
               <span>Інтервал</span>
@@ -165,7 +177,7 @@ const AddNotes : React.FC = () => {
                   <IonSelectOption value="3 hour 30 min">Кожні 3 год 30 хв</IonSelectOption>
                 </IonSelect>
               </IonItem>
-          <IonButton color="light">Light</IonButton> 
+              <IonButton color="light" slot="end" onClick={ () => saveReminder() }>Зберегти</IonButton> 
           </div>
         }
       </IonList>
