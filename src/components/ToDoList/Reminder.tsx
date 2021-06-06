@@ -15,7 +15,7 @@ import {
 import Header from '../shared/header/Header';
 import './ToDoList.css';
 import { trashOutline,pencilOutline } from 'ionicons/icons';
-import { remindersMethods } from '../../shared//services/remindersMethods'
+import { remindersMethods } from '../../shared/services/RemindersMethods';
 
 
 const Reminder: FC = () => {
@@ -52,7 +52,7 @@ const Reminder: FC = () => {
                             <div className="cardNoteHeader">
                                 <div>
                                     <IonCardTitle className="cardNoteTitle">{reminder.title}</IonCardTitle>
-                                    <IonToggle />
+                                    <IonToggle checked={reminder.active} />
                                 </div>        
                                 <IonButtons>
                                     <IonButton className="cardNoteIcon">

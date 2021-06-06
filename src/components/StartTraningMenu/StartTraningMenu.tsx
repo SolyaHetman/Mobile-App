@@ -23,12 +23,6 @@ const StartTrainingMenu : React.FC = () => (
         <IonToggle />
       </IonCardHeader>
     </IonCard>
-    {/* <IonCard className="cardExercise">
-      <IonCardHeader className="cardExerciseContent">
-        <IonCardTitle className="cardExerciseTitle">Комплекс вправ</IonCardTitle>
-        <IonToggle />
-      </IonCardHeader>
-    </IonCard> */}
     </div>
   </>
 );

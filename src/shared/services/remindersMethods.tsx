@@ -3,7 +3,7 @@ import { db } from '../../Firebase';
 
 export const remindersMethods = {
     getReminders: async (): Promise<any> => {
-      const collectionRef = db.collection("event");
+      const collectionRef = db.collection("notes");
   
       if (collectionRef) {
         try {
@@ -20,7 +20,8 @@ export const remindersMethods = {
               startInterval: data.startInterval,
               endInterval: data.endInterval,
               interval: data.interval,
-              repeatableNotes: data.notes
+              repeatableNotes: data.notes,
+              active: data.active
             }
     
             reminders.push(reminderItem)
@@ -77,7 +78,7 @@ export const remindersMethods = {
     //   }
     // },
     deleteReminder: async (id: string): Promise<void> => {
-      const collectionRef = db.collection("event");
+      const collectionRef = db.collection("notes");
   
       if (collectionRef) {
         try {
